@@ -14,7 +14,7 @@ public class LoginTestCase {
 
     @BeforeClass
     public void beforeClass() {
-        driver = new FirefoxDriver();
+        driver = new ChromeDriver();
     }
 
     @Test
@@ -47,14 +47,14 @@ public class LoginTestCase {
     }
 
     @Test
-    public void TC04_Login() {
+    public void TC04_Login() throws InterruptedException {
         driver.get("http://live.techpanda.org/");
         driver.findElement(By.cssSelector("div[class='footer'] a[title='My Account']")).click();
         driver.findElement(By.xpath("//input[@id='email']")).sendKeys("thankyou@gmail.com");
         driver.findElement(By.xpath("//input[@id='pass']")).sendKeys("123123123");
         driver.findElement(By.xpath("//button[@id='send2']")).click();
 
-        // Dùng XPath
+        Thread.sleep(3000);
         Assert.assertEquals(driver.findElement(By.xpath("//li[@class='error-msg']//span")).getText(), "Invalid login or password.");
     }
 
