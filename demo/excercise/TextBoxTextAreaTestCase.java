@@ -93,7 +93,7 @@ public class TextBoxTextAreaTestCase {
         driver.findElement(By.xpath("//input[@name='firstName']")).sendKeys(firstName);
         driver.findElement(By.xpath("//input[@name='lastName']")).sendKeys(lastName);
 
-        String employeeID = driver.findElement(By.xpath("//label[contains(.,'Employee Id')]/parent::div/following-sibling::div//input")).getAttribute("value");
+        String employeeID = driver.findElement(By.xpath("//label[contains(.,'Employee Id')]/parent::div/following-sibling::div//input")).getDomProperty("value");
 
         driver.findElement(By.xpath("//p[contains(.,'Create Login Details')]/following-sibling::div")).click();
         Thread.sleep(3000);
@@ -103,9 +103,9 @@ public class TextBoxTextAreaTestCase {
         driver.findElement(By.xpath("//label[text()='Confirm Password']/parent::div/following-sibling::div//input")).sendKeys(password);
         driver.findElement(By.xpath("//button[contains(.,'Save')]")).click();
 
-        Assert.assertEquals(driver.findElement(By.xpath("//input[@name='firstName']")).getAttribute("value"), firstName);
-        Assert.assertEquals(driver.findElement(By.xpath("//input[@name='lastName']")).getAttribute("value"), lastName);
-        Assert.assertEquals(driver.findElement(By.xpath("//label[contains(.,'Employee Id')]/parent::div/following-sibling::div//input")).getAttribute("value"), employeeID);
+        Assert.assertEquals(driver.findElement(By.xpath("//input[@name='firstName']")).getDomProperty("value"), firstName);
+        Assert.assertEquals(driver.findElement(By.xpath("//input[@name='lastName']")).getDomProperty("value"), lastName);
+        Assert.assertEquals(driver.findElement(By.xpath("//label[contains(.,'Employee Id')]/parent::div/following-sibling::div//input")).getDomProperty("value"), employeeID);
 
         driver.findElement(By.xpath("//a[contains(.,'Immigration')]")).click();
         Thread.sleep(3000);
@@ -121,8 +121,8 @@ public class TextBoxTextAreaTestCase {
         driver.findElement(By.cssSelector("button i.bi-pencil-fill")).click();
         Thread.sleep(5000);
 
-        Assert.assertEquals(driver.findElement(By.xpath("//label[text()='Number']/parent::div/following-sibling::div//input")).getAttribute("value"), passPort);
-        Assert.assertEquals(driver.findElement(By.xpath("//label[text()='Comments']/parent::div/following-sibling::div//textarea")).getAttribute("value"), comment);
+        Assert.assertEquals(driver.findElement(By.xpath("//label[text()='Number']/parent::div/following-sibling::div//input")).getDomProperty("value"), passPort);
+        Assert.assertEquals(driver.findElement(By.xpath("//label[text()='Comments']/parent::div/following-sibling::div//textarea")).getDomProperty("value"), comment);
 
         driver.findElement(By.xpath("//span[@class='oxd-userdropdown-tab']")).click();
         Thread.sleep(3000);
@@ -137,9 +137,9 @@ public class TextBoxTextAreaTestCase {
         driver.findElement(By.xpath("//span[contains(.,'My Info')]")).click();
         Thread.sleep(3000);
 
-        Assert.assertEquals(driver.findElement(By.xpath("//input[@name='firstName']")).getAttribute("value"), firstName);
-        Assert.assertEquals(driver.findElement(By.xpath("//input[@name='lastName']")).getAttribute("value"), lastName);
-        Assert.assertEquals(driver.findElement(By.xpath("//label[contains(.,'Employee Id')]/parent::div/following-sibling::div//input")).getAttribute("value"), employeeID);
+        Assert.assertEquals(driver.findElement(By.xpath("//input[@name='firstName']")).getDomProperty("value"), firstName);
+        Assert.assertEquals(driver.findElement(By.xpath("//input[@name='lastName']")).getDomProperty("value"), lastName);
+        Assert.assertEquals(driver.findElement(By.xpath("//label[contains(.,'Employee Id')]/parent::div/following-sibling::div//input")).getDomProperty("value"), employeeID);
 
         driver.findElement(By.xpath("//a[contains(.,'Immigration')]")).click();
         Thread.sleep(3000);
@@ -147,8 +147,8 @@ public class TextBoxTextAreaTestCase {
         driver.findElement(By.cssSelector("button i.bi-pencil-fill")).click();
         Thread.sleep(3000);
 
-        Assert.assertEquals(driver.findElement(By.xpath("//label[text()='Number']/parent::div/following-sibling::div//input")).getAttribute("value"), passPort);
-        Assert.assertEquals(driver.findElement(By.xpath("//label[text()='Comments']/parent::div/following-sibling::div//textarea")).getAttribute("value"), comment);
+        Assert.assertEquals(driver.findElement(By.xpath("//label[text()='Number']/parent::div/following-sibling::div//input")).getDomProperty("value"), passPort);
+        Assert.assertEquals(driver.findElement(By.xpath("//label[text()='Comments']/parent::div/following-sibling::div//textarea")).getDomProperty("value"), comment);
     }
 
     @AfterClass
