@@ -20,11 +20,11 @@ public class InterActionsPartOneTestCase {
 
     @BeforeClass
     public void initialBrowser() {
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--user-data-dir=C:/Users/nguye/AppData/Local/Google/Chrome/User Data");
-        options.addArguments("--profile-directory=Profile 2");
+//        ChromeOptions options = new ChromeOptions();
+//        options.addArguments("--user-data-dir=C:/Users/nguye/AppData/Local/Google/Chrome/User Data");
+//        options.addArguments("--profile-directory=Profile 2");
 
-        driver = new ChromeDriver(options);
+        driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 
