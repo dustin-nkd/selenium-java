@@ -104,11 +104,6 @@ public class WindowsHandleTestCase {
         Assert.assertEquals(driver.findElement(By.xpath("//li[@class='success-msg']")).getText(), "The comparison list was cleared.");
     }
 
-    @Test
-    public void TC03_Cambridge() {
-        driver.get();
-    }
-
     private void switchToWindowByTitle(String title) {
         for (String windowHandle : driver.getWindowHandles()) {
             driver.switchTo().window(windowHandle);
