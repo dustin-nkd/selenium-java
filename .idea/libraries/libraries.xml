@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="libraries">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libraries/selenium-devtools-v85-4.27.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libraries/selenium-devtools-v129-4.27.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libraries/selenium-devtools-v130-4.27.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libraries/selenium-devtools-v131-4.27.0.jar!/" />
+      <root url="file://$PROJECT_DIR$/libraries" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/libraries" recursive="false" />
+  </library>
+</component>
